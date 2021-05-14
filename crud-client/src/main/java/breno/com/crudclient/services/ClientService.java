@@ -5,6 +5,8 @@ import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import breno.com.crudclient.dto.ClientDTO;
 import breno.com.crudclient.entities.Client;
 import breno.com.crudclient.repositories.ClientRepository;
+import breno.com.crudclient.services.exceptions.DatabaseException;
 import breno.com.crudclient.services.exceptions.ResourceNotFoundException;
 
 @Service
@@ -56,12 +59,23 @@ public class ClientService {
 		}
 	}
 	
+	public void delete(Long id) {
+		try {
+			repository.deleteById(id);
+		}
+		catch(EmptyResultDataAccessException e) {
+			throw new ResourceNotFoundException("Id not found " + id);
+		}
+		catch (DataIntegrityViolationException e) {
+			throw new DatabaseException("Integrity violation");
+		}
+	}
+	
 	private void copyDtoToEntity(ClientDTO dto, Client entity) {
 		entity.setName(dto.getName());
 		entity.setCpf(dto.getCpf());
 		entity.setIncome(dto.getIncome());
 		entity.setBirthDate(dto.getBirthDate());
 		entity.setChildren(dto.getChildren());		
-	}
-	
+	}	
 }
