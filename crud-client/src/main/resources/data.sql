@@ -1,0 +1,10 @@
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('Jack Nicholson', '943.845.567-67', 1000000.0, TIMESTAMP WITH TIME ZONE '1937-04-22T00:00:00Z', 2);
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('John Travolta', '465.789.678-87', 3000000.0, TIMESTAMP WITH TIME ZONE '1954-02-18T00:00:00Z', 4);
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('John Malkovich', '657.859.428-79', 500000.0, TIMESTAMP WITH TIME ZONE '1953-12-09T00:00:00Z', 1);
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('Tony Ramos', '938.895.767-97', 50000.0, TIMESTAMP WITH TIME ZONE '1955-03-30T00:00:00Z', 2);
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('Bil Gates', '453.885.367-93', 105000.0, TIMESTAMP WITH TIME ZONE '1958-06-15T00:00:00Z', 2);
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('Elis Regina', '844.875.267-37', 3050505.0, TIMESTAMP WITH TIME ZONE '1942-01-12T00:00:00Z', 3);
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('Robert Plant', '593.458.573-69', 1060700.0, TIMESTAMP WITH TIME ZONE '1970-07-20T00:00:00Z', 1);
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('Michael Jackson', '948.858.957-73', 1000000.0, TIMESTAMP WITH TIME ZONE '1966-08-07T00:00:00Z', 4);
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('Jimi Hendrix', '973.448.666-07', 100.0, TIMESTAMP WITH TIME ZONE '1970-03-21T00:00:00Z', 2);
+INSERT INTO client (name, cpf, income, birth_date, children) VALUES ('Gustavo Kirten', '953.850.517-17', 6000000.0, TIMESTAMP WITH TIME ZONE '1947-04-02T00:00:00Z', 3);
